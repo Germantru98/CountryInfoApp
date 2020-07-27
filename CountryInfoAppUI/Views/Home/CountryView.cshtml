@@ -1,0 +1,26 @@
+﻿@model BusinessLogicLayer.Models.CountryInfoDTO
+
+<div class="col-md-3 m-2">
+    <div class="card">
+        <div class="card-header bg-primary text-white">
+            Информация о @Model.CountryName
+        </div>
+        <div class="card-body">
+            <div>
+                <span class="mr-1 font-weight-bold">Код страны:</span> @Model.CountryCode
+            </div>
+            <div>
+                <span class="mr-1 font-weight-bold">Столица:</span> @Model.CountryCapital
+            </div>
+            <div>
+                <span class="mr-1 font-weight-bold">Площадь:</span> @Model.CountryArea
+            </div>
+            <div>
+                <span class="mr-1 font-weight-bold">Население:</span> @Model.CountryPopulation
+            </div>
+            <div>
+                <span class="mr-1 font-weight-bold">Регион:</span> @Model.Region
+            </div>
+        </div>
+    </div>
+</div>

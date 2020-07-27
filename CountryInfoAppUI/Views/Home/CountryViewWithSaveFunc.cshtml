@@ -1,0 +1,35 @@
+﻿@model BusinessLogicLayer.Models.CountryInfoDTO
+<div id="modDialog" class="modal fade">
+    <div id="dialogContent" class="modal-dialog"></div>
+</div>
+<div class="col-md-4 mx-auto">
+    <div class="card">
+        <div class="card-header bg-primary text-white">
+            Информация о @Model.CountryName
+        </div>
+        <div class="card-body">
+            <div>
+                <span class="mr-1 font-weight-bold">Код страны:</span> @Model.CountryCode
+            </div>
+            <div>
+                <span class="mr-1 font-weight-bold">Столица:</span> @Model.CountryCapital
+            </div>
+            <div>
+                <span class="mr-1 font-weight-bold">Площадь:</span> @Model.CountryArea
+            </div>
+            <div>
+                <span class="mr-1 font-weight-bold">Население:</span> @Model.CountryPopulation
+            </div>
+            <div>
+                <span class="mr-1 font-weight-bold">Регион:</span> @Model.Region
+            </div>
+        </div>
+        <div class="card-footer">
+            @Html.ActionLink("Сохранить", "SaveCountyInfos", "Home", null, new { @class = "btn btn-primary dialog" })
+            @Html.ActionLink("Назад", "Index", "Home", null, new { @class = "btn btn-primary" })
+        </div>
+    </div>
+</div>
+@section scripts{
+    @Scripts.Render("~/scripts/InvokeModalWindow.js")
+}
